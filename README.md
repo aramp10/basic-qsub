@@ -39,3 +39,8 @@ echo "Running job on host: $(hostname)"
 echo "Current working directory: $(pwd)"
 echo "Starting at: $(date)" 
 ```
+
+## Useful Links
+
+* [Submitting your Batch Job](https://www.bu.edu/tech/support/research/system-usage/running-jobs/submitting-jobs/)
+   * Refer to the "General Directives" table to see the most commonly used directives
