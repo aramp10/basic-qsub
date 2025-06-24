@@ -9,7 +9,7 @@ echo "Running job on host: $(hostname)"
 echo "Current working directory: $(pwd)"
 echo "Starting at: $(date)" 
 
-# $SCC_ORCA_BIN/orca $JOB_NAME.tzvp.inp >> $SGE_O_WORKDIR/$JOB_NAME.tzvp.out
+#$SCC_ORCA_BIN/orca $JOB_NAME.tzvp.inp >> $SGE_O_WORKDIR/$JOB_NAME.tzvp.out
 
 # Instructions to run this script:
 # Submit the script to the job scheduler using qsub:
