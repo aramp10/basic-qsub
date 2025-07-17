@@ -7,18 +7,18 @@ This repository contains a basic template for submitting jobs to a cluster using
 ## Usage
 
 1. **Edit the script**  
-   Modify the `qsub` directives and commands in the script (`job.sh`) to suit your job requirements.
+   Modify the `qsub` directives and commands in the script (`job.qsub`) to suit your job requirements.
 
 2. **Make the script executable**  
    Run the following command to ensure the script is executable:
    ```bash
-   chmod u+x job.sh
+   chmod u+x job.qsub
    ```
 
 3. **Submit the script**  
    Use the `qsub` command to submit the script to the job scheduler:
    ```bash
-   qsub -N testjob job.sh
+   qsub -N testjob job.qsub
    ```
 
 4. **Check output**  
@@ -26,7 +26,7 @@ This repository contains a basic template for submitting jobs to a cluster using
 
 ## Example Script
 
-Below is an example of the job.sh script:
+Below is an example of the job.qsub script:
 
 ```bash
 #!/bin/bash -l
