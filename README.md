@@ -44,3 +44,7 @@ echo "Starting at: $(date)"
 
 * [Submitting your Batch Job](https://www.bu.edu/tech/support/research/system-usage/running-jobs/submitting-jobs/)
    * Refer to the "General Directives" table to see the most commonly used directives
+
+## Key Details
+* Ticket: [INC20691453](https://bu.service-now.com/now/nav/ui/classic/params/target/incident.do%3Fsysparm_tiny%3Dde7c4f378745ed10a38aedfc0ebb3506%26sys_id%3Dd7b9959247d7e6103a9164c4f16d430d%26sysparm_record_row%3D1)
+* Satsuma2: [GitHub](https://github.com/bioinfologics/satsuma2?tab=readme-ov-file)
