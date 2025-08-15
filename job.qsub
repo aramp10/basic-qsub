@@ -8,6 +8,12 @@ echo "Running job on host: $(hostname)"
 echo "Current working directory: $(pwd)"
 echo "Starting at: $(date)" 
 
-# Instructions to run this script:
-# Submit the script to the job scheduler using qsub:
-# qsub -N testjob job.sh
+export SATSUMA2_PATH=/projectnb/ar-rcs/client/acamargo/INC20691453_Satsuma2/satsuma2/build/bin
+export PATH=$PATH:$SATSUMA2_PATH
+
+cd /projectnb/ar-rcs/client/acamargo/INC20691453_Satsuma2/satsuma2/test
+
+# Remove output folder before running command:
+# concise and safe way to delete the folder only if it exists:
+[ -d xcorr_sample_synt ] && rm -r xcorr_sample_synt
+time SatsumaSynteny2 -q ../samples/human.X.part.fasta -t ../samples/dog.X.part.fasta -o xcorr_sample_synt -slaves 1 -threads 1
