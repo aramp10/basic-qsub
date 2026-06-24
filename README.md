@@ -18,7 +18,7 @@ This repository contains a basic template for submitting jobs to a cluster using
 3. **Submit the script**  
    Use the `qsub` command to submit the script to the job scheduler:
    ```bash
-   qsub -N testjob job.qsub
+   qsub job.qsub
    ```
 
 4. **Check output**  
@@ -34,10 +34,29 @@ Below is an example of the job.qsub script:
 #$ -j y
 #$ -l h_rt=12:00:00
 #$ -pe omp 1
+#$ -N testjob
 
 echo "Running job on host: $(hostname)"
 echo "Current working directory: $(pwd)"
 echo "Starting at: $(date)" 
+```
+
+## R Markdown batch job (R_Markdown/job.qsub)
+
+Renders an R Markdown file on the SCC via `qsub`.
+
+**To render at the command line:**
+
+```bash
+module load R/4.5.2
+module load pandoc/2.5
+Rscript -e 'rmarkdown::render("test_batch.Rmd")'
+```
+
+**To submit as a batch job:**
+
+```bash
+qsub job.qsub
 ```
 
 ## Useful Links
