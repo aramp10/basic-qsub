@@ -1,0 +1,9 @@
+---
+title: "Test Batch Job"
+output: html_document
+---
+
+```{r}
+print("Hello from a batch job!")
+Sys.time()
+```

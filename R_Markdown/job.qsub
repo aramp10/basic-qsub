@@ -1,0 +1,21 @@
+#!/bin/bash -l
+#$ -P ar-rcs
+#$ -j y
+#$ -l h_rt=12:00:00
+#$ -pe omp 1
+#$ -N testjob
+
+echo "Running job on host: $(hostname)"
+echo "Current working directory: $(pwd)"
+echo "Starting at: $(date)"
+
+module load R/4.5.2
+module load pandoc/2.5
+
+Rscript -e 'rmarkdown::render("test_batch.Rmd")'
+
+echo "Finished at: $(date)"
+
+# Instructions to run this script:
+# Submit the script to the job scheduler using qsub:
+# qsub job.qsub
